@@ -57,7 +57,7 @@ async function createTodosFromEvents(
       );
 
     const tag = config[courseName];
-    if (!tag) return console.log(`No tag for ${courseName}`);
+    if (!tag) return console.log(`No tag for ${courseName}|`);
 
     console.log(`Creating todo for: ${event.title}`);
 

@@ -1,0 +1,49 @@
+name: Update
+
+on:
+  schedule:
+    - cron: "* */3 * * *"
+
+env:
+  NODE_VERSION: 16.x
+
+jobs:
+  update-schoology:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Create Config
+        run: |
+          touch config.json
+          echo '
+            {
+              "Spanish IV (H)": "Spanish",
+              "APUSH": "History",
+              "AP Physics C: Mechanics, Electricity, & Magnetism": "Physics",
+              "Career Development": "Career Development",
+              "English 11 (H)": "English",
+              "AP Macroeconomics": "Macro",
+              "Invite to Psych": "Psychology",
+              "AP Calculus BC ": "Calculus",
+              "AP Physics Mechanics, Electricity, & Magnetism Lab": "Physics",
+              "PE 10-12": "Gym"
+            }
+          ' > ./config.json
+      - name: Run Update
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          SCHOOLOGY_KEY: ${{ secrets.SCHOOLOGY_KEY }}
+          SCHOOLOGY_SECRET: ${{ secrets.SCHOOLOGY_SECRET }}
+          SCHOOLOGY_SITE_BASE: ${{ secrets.SCHOOLOGY_SITE_BASE }}
+          SCHOOLOGY_OAUTH_TOKEN: ${{ secrets.SCHOOLOGY_OAUTH_TOKEN }}
+          SCHOOLOGY_OAUTH_SECRET: ${{ secrets.SCHOOLOGY_OAUTH_SECRET }}
+          SCHOOLOGY_USER_ID: ${{ secrets.SCHOOLOGY_USER_ID }}
+        run: |
+            npm install
+            npm run start

@@ -22,15 +22,14 @@ jobs:
           touch config.json
           echo '
             {
-              "Spanish IV (H)": "Spanish",
-              "APUSH": "History",
-              "AP Physics C: Mechanics, Electricity, & Magnetism": "Physics",
+              "AP Spanish Language & Culture": "Spanish",
+              "AP United States Government": "Government",
+              "AP Chemistry": "Chemistry",
               "Career Development": "Career Development",
-              "English 11 (H)": "English",
-              "AP Macroeconomics": "Macro",
-              "Invite to Psych": "Psychology",
-              "AP Calculus BC ": "Calculus",
-              "AP Physics Mechanics, Electricity, & Magnetism Lab": "Physics",
+              "AP English Literature": "English",
+              "AP Microeconomics": "Microeconomics",
+              "Statistics (AP)": "Statistics",
+              "AP Computer Science Principles": "Computer Science Principles",
               "PE 10-12": "Gym"
             }
           ' > ./config.json

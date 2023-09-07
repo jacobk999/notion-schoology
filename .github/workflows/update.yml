@@ -3,8 +3,8 @@ name: Update
 on:
   schedule:
     - cron: "* */3 * * *"
-  workflow_dispatch
-  
+  workflow_dispatch:
+    inputs:
 
 env:
   NODE_VERSION: 18.x

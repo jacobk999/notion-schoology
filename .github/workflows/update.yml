@@ -27,10 +27,9 @@ jobs:
               "AP Spanish Language & Culture": "Spanish",
               "AP United States Government": "Government",
               "AP Chemistry": "Chemistry",
-              "Career Development": "Career Development",
-              "AP English Literature": "English",
+              "AP English Literature ": "English",
               "AP Microeconomics": "Microeconomics",
-              "Statistics (AP)": "Statistics",
+              "AP Statistics ": "Statistics",
               "AP Computer Science Principles": "Computer Science Principles",
               "PE 10-12": "Gym"
             }

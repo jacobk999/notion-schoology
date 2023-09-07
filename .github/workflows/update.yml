@@ -29,7 +29,7 @@ jobs:
               "AP Chemistry": "Chemistry",
               "AP English Literature ": "English",
               "AP Microeconomics": "Microeconomics",
-              "AP Statistics ": "Statistics",
+              "Statistics (AP) ": "Statistics",
               "AP Computer Science Principles": "Computer Science Principles",
               "PE 10-12": "Gym"
             }
